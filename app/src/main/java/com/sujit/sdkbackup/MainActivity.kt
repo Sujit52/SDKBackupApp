@@ -62,12 +62,12 @@ class MainActivity : AppCompatActivity() {
         })
         tokenInput = EditText(this).apply {
             hint = "Telegram bot token (from @BotFather)"
-            singleLine = true
+           setSingleLine(true)
             setText(prefs.getString("bot_token", ""))
         }
         chatInput = EditText(this).apply {
             hint = "Telegram chat ID"
-            singleLine = true
+            setSingleLine(true)
             setText(prefs.getString("chat_id", ""))
         }
         content.addView(tokenInput, matchWrap())
